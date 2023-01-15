@@ -1,3 +1,7 @@
+## 0.0.6
+
+- Make example public.
+
 ## 0.0.5
 
 - Fix readme.
