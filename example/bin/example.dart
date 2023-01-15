@@ -1,4 +1,4 @@
-import 'package:holiday_jp/holiday.dart';
+import 'package:holiday_jp/holiday_jp.dart';
 
 void main(List<String> arguments) {
   final holiday = getHoliday(DateTime(2020, 7, 23));

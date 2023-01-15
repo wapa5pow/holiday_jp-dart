@@ -1,4 +1,4 @@
-import 'package:holiday_jp/holiday.dart';
+import 'package:holiday_jp/src/holiday.dart';
 import 'package:test/test.dart';
 
 void main() {

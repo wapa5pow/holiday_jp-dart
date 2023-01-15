@@ -12,7 +12,7 @@ void main() {
   final dates = (document.keys.toList())..sort();
 
   // generate holidays
-  final sink = File('lib/holiday.g.dart').openWrite();
+  final sink = File('lib/src/holiday.g.dart').openWrite();
   sink.add(utf8.encode("""
 part of 'holiday.dart';
 
