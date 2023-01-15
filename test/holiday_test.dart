@@ -50,17 +50,84 @@ void main() {
   });
 
   group('isHoliday', () {
-    test('Marine Day is holiday', () {
-      expect(isHoliday(marineDay), isTrue);
-    });
+    final testCases = [
+      [DateTime.utc(1970, 1, 1), true],
+      [DateTime.utc(1970, 1, 1, 1, 1, 1, 1), true],
+      [DateTime.utc(1970, 1, 2, 1, 1, 1, 1), false],
+      [DateTime.utc(1970, 1, 2, 0, 0, 0, 0), false],
+      [marineDay, true],
+    ];
 
-    test('1970-01-02 is not holiday', () {
-      expect(isHoliday(DateTime.utc(1970, 1, 2)), isFalse);
-    });
+    for (final testCase in testCases) {
+      final input = testCase[0] as DateTime;
+      final want = testCase[1] as bool;
+      test('Check $input is holiday or not', () {
+        expect(isHoliday(input), want);
+      });
+    }
   });
 
   group('between', () {
     final testCases = [
+      [
+        DateTime.utc(1970, 1, 1, 1, 1, 1, 1),
+        DateTime.utc(1970, 1, 1, 1, 1, 1, 1),
+        [
+          Holiday(
+            date: '1970-01-01',
+            week: '木',
+            weekEn: 'Thursday',
+            name: '元日',
+            nameEn: 'New Year\'s Day',
+          ),
+        ]
+      ],
+      [
+        DateTime.utc(1970, 1, 1, 1, 1, 1, 1),
+        DateTime.utc(1970, 1, 2, 1, 1, 1, 1),
+        [
+          Holiday(
+            date: '1970-01-01',
+            week: '木',
+            weekEn: 'Thursday',
+            name: '元日',
+            nameEn: 'New Year\'s Day',
+          ),
+        ]
+      ],
+      [
+        DateTime.utc(1970, 1, 1, 1, 1, 1, 1),
+        DateTime.utc(1970, 1, 14, 1, 1, 1, 1),
+        [
+          Holiday(
+            date: '1970-01-01',
+            week: '木',
+            weekEn: 'Thursday',
+            name: '元日',
+            nameEn: 'New Year\'s Day',
+          ),
+        ]
+      ],
+      [
+        DateTime.utc(1970, 1, 1, 1, 1, 1, 1),
+        DateTime.utc(1970, 1, 15, 1, 1, 1, 1),
+        [
+          Holiday(
+            date: '1970-01-01',
+            week: '木',
+            weekEn: 'Thursday',
+            name: '元日',
+            nameEn: 'New Year\'s Day',
+          ),
+          Holiday(
+            date: '1970-01-15',
+            week: '木',
+            weekEn: 'Thursday',
+            name: '成人の日',
+            nameEn: 'Coming of Age Day',
+          ),
+        ]
+      ],
       [
         marineDay,
         marineDay,
@@ -73,7 +140,7 @@ void main() {
             nameEn: 'Marine Day',
           ),
         ]
-      ]
+      ],
     ];
 
     for (final testCase in testCases) {
