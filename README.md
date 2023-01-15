@@ -2,7 +2,7 @@
 
 [![Pub Version](https://img.shields.io/pub/v/holiday_jp?color=blueviolet)](https://pub.dev/packages/holiday_jp)
 [![test](https://github.com/wapa5pow/holiday_jp-dart/actions/workflows/ci.yml/badge.svg)](https://github.com/wapa5pow/holiday_jp-dart/actions/workflows/ci.yml)
-[![latest_dataset](https://github.com/wapa5pow/holiday_jp-dart/actions/workflows/latest_dataset.yml/badge.svg)](https://github.com/wapa5pow/holiday_jp-dart/actions/workflows/latest_dataset.yml)
+[![latest_holiday_jp](https://github.com/wapa5pow/holiday_jp-dart/actions/workflows/latest_holiday_jp.yml/badge.svg)](https://github.com/wapa5pow/holiday_jp-dart/actions/workflows/latest_holiday_jp.yml)
 
 🎌 Japanese holiday for Dart
 
@@ -42,4 +42,8 @@ void main(List<String> arguments) {
 
 ## Tools
 
-To update generated holiday file, 
+To update generated holiday file, run the following.
+
+```bash
+./tool/update_holidays.sh
+```
