@@ -1,11 +1,13 @@
-name: latest_dataset
+name: latest_holiday_jp
 
 on:
   push:
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   job-test:
-    name: Latest dataset
+    name: Latest holiday_jp
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
