@@ -6,3 +6,4 @@ environment:
 dependencies:
   holiday_jp:
     path: ../
+  intl: ^0.18.0
