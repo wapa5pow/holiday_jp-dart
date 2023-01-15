@@ -9,5 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: dart-lang/setup-dart@v1.3
+      - run: dart pub get
       - run: ./tool/update_holidays.sh
       - run: git diff --exit-code
