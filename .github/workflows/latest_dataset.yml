@@ -1,0 +1,13 @@
+name: latest_dataset
+
+on:
+  push:
+
+jobs:
+  job-test:
+    name: Latest dataset
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: ./tool/update_holidays.sh
+      - run: git diff --exit-code
