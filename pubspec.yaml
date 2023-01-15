@@ -1,6 +1,6 @@
 name: holiday_jp
 description: Get holidays in Japan.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/wapa5pow/holiday_jp-dart
 
 environment:
