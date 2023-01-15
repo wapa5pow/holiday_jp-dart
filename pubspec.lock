@@ -331,7 +331,7 @@ packages:
     source: hosted
     version: "1.2.0"
   yaml:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: yaml
       url: "https://pub.dartlang.org"
