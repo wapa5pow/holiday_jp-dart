@@ -1,3 +1,7 @@
+## 0.0.7
+
+- Use lower intl package version.
+
 ## 0.0.6
 
 - Make example public.
