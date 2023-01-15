@@ -1,6 +1,6 @@
 name: holiday_jp
-description: Get holidays in Japan.
-version: 0.0.3
+description: Get holidays in Japan. This library uses holiday_jp as Japanese holiday dataset.
+version: 0.0.4
 homepage: https://github.com/wapa5pow/holiday_jp-dart
 
 environment:
