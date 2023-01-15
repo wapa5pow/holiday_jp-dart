@@ -1,0 +1,17 @@
+name: test
+
+on:
+  push:
+
+jobs:
+  job-test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dart-lang/setup-dart@v1.3
+      - name: Install dependencies
+        run: dart pub get
+      - name: Run test
+        run: |
+          dart run test
