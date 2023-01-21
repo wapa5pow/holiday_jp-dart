@@ -1,8 +1,4 @@
-import 'package:intl/intl.dart';
-
 part 'holiday.g.dart';
-
-final _formatter = DateFormat('yyyy-MM-dd');
 
 class Holiday {
   final String date;
@@ -42,7 +38,8 @@ class Holiday {
 ///
 /// If [dateTime] is not holiday, it returns null.
 Holiday? getHoliday(DateTime dateTime) {
-  final date = _formatter.format(dateTime);
+  final date =
+      '${dateTime.year}-${dateTime.month.toString().padLeft(2, '0')}-${dateTime.day.toString().padLeft(2, '0')}';
   return holidays.containsKey(date) ? holidays[date] : null;
 }
 
