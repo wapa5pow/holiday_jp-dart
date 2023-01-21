@@ -1,3 +1,7 @@
+## 0.0.8
+
+- Remove intl package
+
 ## 0.0.7
 
 - Use lower intl package version.
